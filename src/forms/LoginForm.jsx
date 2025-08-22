@@ -52,11 +52,6 @@ function LoginForm() {
     dispatch(login(formData)).then((res) => {
       if (res.type === "login/fulfilled") {
         dispatch(getMe(res?.payload?.data?.token));
-        // .then((response) => {
-        //   if (response.type === "getMe/fulfilled") {
-        //     // navigate("/");
-        //   }
-        // });
       }
     });
   }

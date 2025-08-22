@@ -10,6 +10,8 @@ function UpdateConfig() {
   const { token } = useSelector((state) => state.auth);
   const { config, isLoadingConfig } = useSelector((state) => state.config);
 
+  console.log(config);
+
   const [formData, setFormData] = useState({
     autoCloseEnabled: config?.autoCloseEnabled || "",
     confidenceThreshold: config?.confidenceThreshold || "",

@@ -12,7 +12,7 @@ export const getConfig = createAsyncThunk(
           Authorization: `Bearer ${token}`,
         },
       });
-
+      console.log(res);
       return res.data;
     } catch (err) {
       return thunkAPI.rejectWithValue(err?.response?.data);
@@ -59,6 +59,7 @@ const configSlice = createSlice({
         state.isLoadingConfig = true;
       })
       .addCase(getConfig.fulfilled, function (state, action) {
+        console.log(action);
         state.isLoadingConfig = false;
         state.config = action?.payload?.data?.config[0];
       })

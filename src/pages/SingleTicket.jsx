@@ -25,11 +25,6 @@ function SingleTicket() {
 
   return (
     <div className="w-[95%] md:w-[85%] mx-auto mt-6 mb-10">
-      {/* {isLoadingTicket && (
-        <div className="h-20">
-          <Spinner val={5} />
-        </div>
-      )} */}
       {singleTicket ? (
         <>
           <button
@@ -93,7 +88,6 @@ function SingleTicket() {
                 </div>
               </div>
 
-              {/* Assignee Info */}
               {singleTicket?.assignee && (
                 <div className="bg-white p-5 border border-gray-200 rounded-lg shadow-sm">
                   <h2 className="flex items-center gap-2 text-lg font-semibold text-gray-800">
@@ -115,7 +109,6 @@ function SingleTicket() {
               )}
             </div>
 
-            {/* Right Column: AI Suggestion */}
             <div className="lg:col-span-2">
               <div className="bg-white p-5 border border-gray-200 rounded-lg shadow-sm">
                 <h2 className="flex items-center gap-2 text-lg font-semibold text-gray-800">
